@@ -1,0 +1,22 @@
+
+# Dataverse Table Schema
+
+## Loans Table
+- LoanID (GUID)
+- ApplicantName (Text)
+- Amount (Currency)
+- Status (Choice: Pending, Approved, Rejected)
+- CreatedDate (DateTime)
+
+## Users Table
+- UserID (GUID)
+- FullName (Text)
+- Role (Choice: Loan Officer, Manager)
+- Email (Text)
+
+## ApprovalStages Table
+- StageID (GUID)
+- LoanID (Lookup: Loans)
+- Approver (Lookup: Users)
+- Status (Choice: Pending, Approved, Rejected)
+- Timestamp (DateTime)
